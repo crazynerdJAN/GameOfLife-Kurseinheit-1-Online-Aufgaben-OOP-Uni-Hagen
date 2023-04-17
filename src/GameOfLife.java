@@ -28,13 +28,13 @@ public class GameOfLife {
             for(int m=0; m < this.feld[1].length; m++){
 
                       if(n == 0 || m ==0 || n == 4 || m == 4){
-                            nextGen[m][n] = false;
+                            this.nextGen[m][n] = false;
 
                         }else{
 
                         anzahlnachbarn=prüfenachbarn(n,m);  
 
-                            if(anzahlnachbarn == 3 && this.feld[n][m] == false){
+                            if(anzahlnachbarn == 3 && !this.feld[n][m]){
                             this.nextGen[n][m] = true;
                                 }
                             else if((anzahlnachbarn ==2 || anzahlnachbarn ==3) && this.feld[n][m] == true){
